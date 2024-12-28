@@ -1,56 +1,11 @@
-/* General Styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%;
-}
 
-/* Hero Section */
-.home-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  overflow: hidden;
-}
-
-.home-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(70%);
-  z-index: 1;
-}
-
-.home-overlay {
-  position: relative; /* Ensure proper stacking */
-  text-align: center;
-  color: #f3f3f3;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.home-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.home-subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-/* About Penang Section */
 .about-penang {
   background-color: #ffffff;
   padding: 2rem;
-  text-align: left; /* Align text to the right */
+  text-align: left; 
   color: #333;
-  max-width: 80%; /* Limit the width of the section */
-  margin: 0 auto; /* Center the section horizontally */
+  max-width: 80%; 
+  margin: 0 auto; 
 }
 
 .about-penang h2 {

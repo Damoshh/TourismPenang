@@ -1,16 +1,16 @@
 import React from 'react';
 import './Home.css';
+import Header from '../../components/Header/Header.jsx';
+import imgHome from '../../assets/home1.jpg'
 
 const Home = () => {
   return (
     <>
-      <div className="home-container">
-        <img className="home-background" src="src/assets/hans8.jpg" alt="Penang Landscape" />
-        <div className="home-overlay">
-          <h1 className="home-title">EXPLORE PENANG</h1>
-          <p className="home-subtitle">Discover the culture, cuisine, and beauty of Penang.</p>
-        </div>
-      </div>
+      <Header
+        headerImg = {imgHome}
+        title="Welcome to Penang"
+        text="Discover the Pearl of the Orient"
+      />
 
       <div className="about-penang">
         <h2>About Penang</h2>
