@@ -97,7 +97,7 @@
   display: none;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 970px) {
   .navbar{
     z-index: 99;
   }
@@ -183,4 +183,21 @@
   .dark .menu-icons i{
     color: #fffcfc;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .title{
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .menu-icons i{
+    font-size:  1rem;
+  }
+
+  .toggle-icon-mobile{
+    width: 20px;
+    margin-bottom: 2px;
+  }
+
 }

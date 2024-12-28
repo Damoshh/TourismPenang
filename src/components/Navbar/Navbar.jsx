@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import toggle_light from '../../assets/night.png'
@@ -8,6 +8,18 @@ import { MenuItems } from './MenuItems';
 export const Navbar = ({theme,setTheme}) => {
 
   const [clicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (clicked && !e.target.closest('.navbar') && !e.target.closest('.menu-icons')) {
+        setClicked(false);
+      }
+    };
+  
+    document.addEventListener('click', closeMenu);
+    return () => document.removeEventListener('click', closeMenu);
+  }, [clicked]);
+
   const handleClick = () => {
     setClicked(!clicked);
   }
@@ -33,10 +45,15 @@ export const Navbar = ({theme,setTheme}) => {
       <div className={clicked ? 'nav-menu active' : 'nav-menu'}>
         {MenuItems.map((item, index) => {
           return (
-            <Link className = {item.cName} to={item.url}>
-              <i className={item.icon}></i>
-              {item.title}
-            </Link>
+            <Link 
+            key={index} 
+            className={item.cName} 
+            to={item.url} 
+            onClick={() => setClicked(false)}
+          >
+            <i className={item.icon}></i>
+            {item.title}
+          </Link>
           )
           })
         }
