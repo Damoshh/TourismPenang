@@ -6,6 +6,7 @@ import Event from "./pages/Event/Event";
 import Place from "./pages/Place/Place";
 import About from "./pages/About/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/place" element = {<Place/>} />
                 <Route path="/about" element = {<About/>} />
             </Routes>
+            <Footer/>
         </Router>
         </div>
     );
