@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PlaceCard from '../../../components/Card/PlaceCard';
 import beachPlaces from '../ListPlaces/beachPlaces'; 
 import restaurantPlaces from '../ListPlaces/restaurantPlaces'; 
-import restaurantPlaces from '../ListPlaces/restaurantPlaces'; 
-import restaurantPlaces from '../ListPlaces/restaurantPlaces'; 
+import culturePlaces from '../ListPlaces/culturePlaces'; 
+import hotelPlaces from '../ListPlaces/hotelPlaces'; 
 import './Search.css';
 
 const SearchComponent = () => {
@@ -20,7 +20,7 @@ const SearchComponent = () => {
     { id: 'beach', label: 'Beach' }
   ];
 
-  const allPlaces = [...beachPlaces, ...restaurantPlaces];
+  const allPlaces = [...beachPlaces, ...restaurantPlaces, ...culturePlaces, ...hotelPlaces];
 
   const filteredPlaces = allPlaces.filter(place => {
     const matchesPlace = !placeQuery || place.title.toLowerCase().includes(placeQuery.toLowerCase());
