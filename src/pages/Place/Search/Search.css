@@ -1,0 +1,260 @@
+.search-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .search-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .search-button {
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .categories-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .category-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .category-button.active {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .card-image-container {
+    position: relative;
+    height: 200px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #64748b;
+  }
+  
+  .card-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-rating {
+    color: #eab308;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-review {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .search-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+  }
+  
+  .dark .search-input {
+    background: #1a1a1a;
+    border-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .search-button {
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .dark .search-button {
+    background: #1a1a1a;
+    border-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .categories-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .category-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dark .category-button {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .category-button.active {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .dark .category-button.active {
+    background: #dfbd27;
+    color: black;
+  }
+  
+  .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: white;
+  }
+  
+  .dark .card {
+    background: #1a1a1a;
+    border-color: #2d3748;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .dark .card-content {
+    color: #e2e8f0;
+  }
+  
+  .card-category {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .dark .card-category {
+    background-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .dark .card-location {
+    color: #9ca3af;
+  }
+  
+  .dark .card-review {
+    color: #9ca3af;
+  }
+  
+  .no-results {
+    color: #64748b;
+  }
+  
+  .dark .no-results {
+    color: #9ca3af;
+  }

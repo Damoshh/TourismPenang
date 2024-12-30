@@ -1,4 +1,10 @@
-.place-content {
-    margin-top: 250px;
-    text-align: center;
-  }
+.place-page {
+  margin-top: 100px;
+  padding-bottom: 30rem;
+  background: white;
+  min-height: 100vh;
+}
+
+.dark .place-page {
+  background: #121212;
+}

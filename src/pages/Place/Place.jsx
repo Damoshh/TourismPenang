@@ -1,11 +1,15 @@
 import React from 'react'
-import './Place.css';
+import Search from './Search/Search'
+import './Place.css'
 
 const Place = () => {
   return (
-    <div className='place-content'>
-      THIS IS PLACE PAGE
+    <>
+    <div className='place-page'>
+      <Search/>
+
     </div>
+    </>
   )
 }
 
