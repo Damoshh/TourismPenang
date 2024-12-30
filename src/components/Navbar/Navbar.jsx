@@ -1,8 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import toggle_light from '../../assets/night.png'
-import toggle_dark from '../../assets/day.png'
 import { MenuItems } from './MenuItems';
 
 export const Navbar = ({theme,setTheme}) => {
@@ -36,12 +34,15 @@ export const Navbar = ({theme,setTheme}) => {
       </Link>
 
       <div className='menu-mobile'>
-        <img onClick={()=>{toggle_mode()}} src={ theme == 'light' ? toggle_light : toggle_dark}  alt='' className='toggle-icon-mobile' />
+      <i onClick={toggle_mode} 
+           className={`toggle-icon-mobile ${theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'}`}
+      />
 
         <div className='menu-icons' onClick={handleClick}>
           <i className={clicked ? 'fas fa-times': 'fas fa-bars'}></i>
         </div>
       </div>
+
       <div className={clicked ? 'nav-menu active' : 'nav-menu'}>
         {MenuItems.map((item, index) => {
           return (
@@ -57,7 +58,9 @@ export const Navbar = ({theme,setTheme}) => {
           )
           })
         }
-        <img onClick={()=>{toggle_mode()}} src={ theme == 'light' ? toggle_light : toggle_dark}  alt='' className='toggle-icon' />
+        <i onClick={toggle_mode} 
+           className={`toggle-icon ${theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'}`}
+        />
       </div>
     </div>
   );
