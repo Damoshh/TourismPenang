@@ -1,6 +1,6 @@
 .footer{
     padding: 1.8rem 4rem;
-    background: rgb(59, 186, 218);
+    background: #3bbada;
     color: rgb(0, 0, 0);
 }
 
@@ -63,19 +63,19 @@
 
   .dark .footer {
     background: #000;
-    color: #fff;
+    color: #3bbada;
   }
   
   .dark .footer i {
-    color: #fff;
+    color: #3bbada;
   }
   
   .dark .bottom a {
-    color: #fff;
+    color: #3bbada;
   }
   
   .dark .bottom a::after {
-    background: #fff;
+    background: #3bbada;
   }
 
 @media screen and (max-width : 800px){
