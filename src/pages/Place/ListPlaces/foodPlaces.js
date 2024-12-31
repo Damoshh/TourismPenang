@@ -9,53 +9,44 @@ import imgRst8 from '../../../assets/imgRst8.jpg';
 import imgRst9 from '../../../assets/imgRst9.jpg';
 import imgRst10 from '../../../assets/imgRst10.jpg';
 
-const restaurantPlace = [
+const foodPlaces = [
     {
       id: 40,
-      title: "Deen Maju Nasi Kandar, George Town",
-      category: "restaurant",
-      images: [imgRst2, imgRst1],
-      location: "George Town, Penang",
-      locationLink: "https://maps.app.goo.gl/rxdFMyzGukwWz1DA6",
-      rating: 4
-    },
-    {
-      id: 41,
       title: "Nasi Kandar Kayu",
-      category: "restaurant",
+      category: "food",
       images: [imgRst6, imgRst5],
       location: "Bayan Lepas, Penang",
       locationLink: "https://maps.app.goo.gl/4n46gC8sNDoXZ6Jh7",
       rating: 3
     },
     {
-      id: 42,
+      id: 41,
       title: "Hameed Pata Mee",
-      category: "restaurant",
+      category: "food",
       images: [imgRst7, imgRst8],
       location: "George Town, Penang",
       locationLink: "https://maps.app.goo.gl/2FEGpeAM6681TXwn7",
       rating: 4
     },
     {
-      id: 43,
+      id: 42,
       title: "Ali Nasi Lemak Daun Pisang",
-      category: "restaurant",
+      category: "food",
       images: [imgRst9, imgRst10],
       location: "George Town, Penang",
       locationLink: "https://maps.app.goo.gl/7w4VpD3hMFEVJjVJ6",
       rating: 4
     },
     {
-      id: 44,
-      title: "Deen Maju Nasi Kandar, Jelutong",
-      category: "restaurant",
+      id: 43,
+      title: "Deen Maju Nasi Kandar",
+      category: "food",
       images: [imgRst3, imgRst4],
       location: "Jelutong, Penang",
       locationLink: "https://maps.app.goo.gl/JcPr8vPaJz5JMZm46",
-      rating: 4
+      rating: 3
     },
 
   ];
   
-export default restaurantPlace;
+export default foodPlaces;

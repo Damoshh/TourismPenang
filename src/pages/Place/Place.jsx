@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from './Search/Search'
+import Search from './SearchPlace/SearchPlace'
 import './Place.css'
 
 const Place = () => {

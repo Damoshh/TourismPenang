@@ -1,6 +1,6 @@
 .place-page {
-  margin-top: 100px;
-  padding-bottom: 30rem;
+  padding-top: 8rem; /* Change from margin-top to padding-top */
+  padding-bottom: 20rem;
   background: white;
   min-height: 100vh;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import'./PlaceCard.css'
 
 const PlaceCard = ({ place, currentImageIndex = 0, onImageNav }) => {
   return (
@@ -6,7 +7,7 @@ const PlaceCard = ({ place, currentImageIndex = 0, onImageNav }) => {
       <div className="card-image-container">
         <img 
           src={place.images[currentImageIndex]} 
-          alt={place.title} 
+          alt=''
           className="card-image" 
         />
         <button 
@@ -26,12 +27,10 @@ const PlaceCard = ({ place, currentImageIndex = 0, onImageNav }) => {
       <div className="card-content">
         <h3 className="card-title">{place.title}</h3>
         <div className="card-location">
-        <span className="location-icon">📍</span>
+          <i className='fa-solid fa-map-pin'/>
           <a 
-            href={place.locationLink || `https://www.google.com/maps/search/${encodeURIComponent(place.location)}`}
+            href={place.locationLink}
             target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors"
           >
             {place.location}
           </a>

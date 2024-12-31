@@ -1,0 +1,250 @@
+/* SearchPlace.css */
+/* Header styles */
+.page-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/path-to-penang-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 1rem;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Stats section */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.dark .stat-number {
+  color: #dfbd27;
+}
+
+.stat-label {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.dark .stat-label {
+  color: #e2e8f0;
+}
+
+/* Filter section */
+.filters-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 0 2rem 2rem 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .filters-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filters-title {
+  font-size: 1.2rem;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.dark .filters-title {
+  color: #dfbd27;
+}
+
+/* Search container */
+.search-inputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #1a202c;
+}
+
+.dark .search-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.dark .search-input::placeholder {
+  color: #718096;
+}
+
+.search-button {
+  padding: 0 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #1a202c;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .search-button {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.search-button:hover {
+  background: #f7fafc;
+}
+
+.dark .search-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Categories */
+.categories-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  background: #f3f4f6;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .category-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.category-button:hover {
+  background: #e5e7eb;
+}
+
+.dark .category-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.category-button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.dark .category-button.active {
+  background: #dfbd27;
+  color: black;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #4b5563;
+  font-size: 1.1rem;
+}
+
+.dark .no-results {
+  color: #e2e8f0;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .page-header {
+    margin: 0 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+  }
+
+  .filters-section {
+    margin: 0 1rem 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .search-inputs {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .category-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}

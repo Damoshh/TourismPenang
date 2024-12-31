@@ -1,6 +1,6 @@
-const beachPlace = [
+const beachPlaces = [
 
   ];
   
-  export default beachPlace;
+  export default beachPlaces;
   
