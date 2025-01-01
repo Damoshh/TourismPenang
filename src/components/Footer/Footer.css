@@ -1,10 +1,11 @@
 .footer{
     padding: 1.8rem 4rem;
-    background: #3bbada;
+    background: #76b0d6;
     color: rgb(0, 0, 0);
 }
 
 .top{
+    margin-top: 0.6rem;
     display: flex;
     align-items: center;
     text-align: start;
