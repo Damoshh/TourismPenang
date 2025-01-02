@@ -1,4 +1,112 @@
+/* General Styles */
 .event-content {
-    margin-top: 250px;
-    text-align: center;
+  position: relative;
+  margin-top: 50px;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #ff6f61;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Event Item Styles */
+.event-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-item:hover {
+  transform: scale(1.05);
+}
+
+/* Alternate the side of images for better layout */
+.event-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.event-details {
+  flex: 1;
+  padding: 1rem;
+}
+
+.event-item img {
+  flex: 1;
+  max-width: 30%; /* Reduced from 40% to 30% */
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and Date Styles */
+.event-item h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Description Styles */
+.event-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Button Styles */
+.event-item button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.event-item button:hover {
+  background: #d45042;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-item {
+    flex-direction: column;
   }
+
+  .event-item img {
+    max-width: 80%; /* Reduced image size for mobile view */
+    margin: 0 auto 1rem auto;
+  }
+}
