@@ -13,7 +13,7 @@ const Content = () => {
           Halim Muadzam Shah Bridge. Penang's strategic location along the Strait of Malacca 
           has historically made it a bustling hub of trade and culture.
         </p>
-        <img className="section-image" src="src/assets/geo-penangg.jpg" alt="Penang Geography" />
+        <img className="section-image" src="src/assets/about1.jpg" alt="Penang Geography" />
         
         <h2 className="section-title">Area and Climate</h2>
         <p className="section-text">
@@ -29,7 +29,7 @@ const Content = () => {
           Chinese, Indians, and other ethnic groups. The Chinese community makes up a significant 
           portion of the state's population, followed by Malays and Indians.
         </p>
-        <img className="section-image" src="src/assets/culture.jpg" alt="Penang Culture" />
+        <img className="section-image" src="src/assets/about2.jpg" alt="Penang Culture" />
       </div>
 
       <div className="content-section">
@@ -48,7 +48,7 @@ const Content = () => {
           the Indian community often speaks Tamil. This multilingualism is a defining 
           characteristic of the state's vibrant identity.
         </p>
-        <img className="section-image" src="src/assets/religion.webp" alt="Religious Diversity" />
+        <img className="section-image" src="src/assets/about3.webp" alt="Religious Diversity" />
       </div>
     </>
   )
