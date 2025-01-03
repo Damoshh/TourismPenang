@@ -1,10 +1,10 @@
 import React from 'react';
 import './Event.css';
-import img1 from '../../events/christmast.jpg';
-import img2 from '../../events/newyear.jpg';
-import img3 from '../../events/cny.jpg';
-import img4 from '../../events/raya.jpg';
-import img5 from '../../events/penang.jpg';
+import img1 from '../../assets/christmast.jpg';
+import img2 from '../../assets/newyear.jpg';
+import img3 from '../../assets/cny.jpg';
+import img4 from '../../assets/raya.jpg';
+import img5 from '../../assets/penang.jpg';
 import Header from '../../components/Header/Header.jsx';
 import { Link } from 'react-router-dom';
 
