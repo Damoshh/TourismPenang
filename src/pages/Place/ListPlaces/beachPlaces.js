@@ -113,4 +113,4 @@ const beachPlaces = [
 
   ];
   
-export default foodPlaces;
+export default beachPlaces;
