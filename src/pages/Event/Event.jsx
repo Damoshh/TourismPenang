@@ -1,6 +1,10 @@
 import React from 'react';
 import './Event.css';
-import img5 from '../../assets/penang.jpg';
+import img1 from '../../events/christmast.jpg';
+import img2 from '../../events/newyear.jpg';
+import img3 from '../../events/cny.jpg';
+import img4 from '../../events/raya.jpg';
+import img5 from '../../events/penang.jpg';
 import Header from '../../components/Header/Header.jsx';
 import EventCard from './EventCard/EventCard.jsx';
 import EventList from './EventList.js';
