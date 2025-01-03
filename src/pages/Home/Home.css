@@ -1,22 +1,45 @@
 
 .about-penang {
   background-color: #ffffff;
-  padding: 2rem;
-  text-align: left; 
+  padding: 2rem 10px; /* Add padding to match the card container */
+  text-align: center;
   color: #333;
-  max-width: 80%; 
-  margin: 0 auto; 
+  max-width: 1200px; /* Same as the card container */
+  margin: 0 auto; /* Center align */
 }
 
-.about-penang h2 {
+.about-penang h2{
   font-size: 2rem;
-  margin-bottom: 1rem;
   color: #007bff;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .about-penang p {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.home-card {
+  margin: 10px; 
+}
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.rec-penang{
+  font-size: 2rem;
+  color: #007bff;
+  text-align: center;
+  padding: auto;
+  margin: 2rem auto; 
+}
+
+.carousel-container {
+  margin: 2rem auto; /* Add spacing above the carousel */
+  padding: 0 10px;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +48,7 @@
   }
 
   .home-subtitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .about-penang h2 {
@@ -33,6 +56,26 @@
   }
 
   .about-penang p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .rec-penang {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin: 1.5rem auto; /* Adjust margin for spacing */
+  }
+
+  .carousel-container {
+    padding: 0 5px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .rec-penang {
+    font-size: 1.2rem; /* Further reduce font size for very small screens */
+    margin: 1rem auto; /* Adjust margin for compact spacing */
+  }
+
+  .carousel-container {
+    padding: 0; /* Remove padding for very small screens */
   }
 }
