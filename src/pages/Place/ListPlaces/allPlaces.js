@@ -1,6 +1,6 @@
-import beachPlaces from './beachPlaces'; 
+import naturePlaces from './naturePlaces'; 
 import foodPlaces from './foodPlaces'; 
-import culturePlaces from './culturePlaces'; 
+import heritagePlaces from './heritagePlaces'; 
 import entertainmentPlaces from './entertainmentPlaces'; 
 import hotelPlaces from './hotelPlaces'; 
 
@@ -14,9 +14,9 @@ import hotelPlaces from './hotelPlaces';
   }
   
 const allPlaces = shuffleArray([
-    ...beachPlaces,
+    ...naturePlaces,
     ...foodPlaces,
-    ...culturePlaces,
+    ...heritagePlaces,
     ...entertainmentPlaces,
     ...hotelPlaces
   ]);

@@ -13,8 +13,8 @@ const SearchPlace = () => {
     { id: 'all', label: 'All', icon: '🏠' },
     { id: 'hotel', label: 'Hotel', icon: '🏨' },
     { id: 'food', label: 'Food', icon: '🍽️' },
-    { id: 'culture', label: 'Culture and Heritage', icon: '🏛️' },
-    { id: 'beach', label: 'Beach', icon: '🏖️' },
+    { id: 'heritage', label: 'Heritage', icon: '🏛️' },
+    { id: 'nature', label: 'Nature', icon: '🌳' },
     { id: 'entertainment', label: 'Entertainment', icon: '🎭' }
   ];
 
