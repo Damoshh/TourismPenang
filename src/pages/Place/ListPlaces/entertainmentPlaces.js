@@ -27,6 +27,7 @@ const entertainmentPlaces = [
       locationLink: "https://maps.app.goo.gl/SE3guCeFxcGVt2dT9",
       rating: 3
     },
+    {
     id: 32,
       title: "Tropical Spice Garden",
       category: "entertainment",
