@@ -1,10 +1,52 @@
 .place-page {
-  padding-top: 8rem; /* Change from margin-top to padding-top */
-  padding-bottom: 20rem;
-  background: white;
+  padding-top: 120px;
+  padding-bottom: 25rem;
+  padding: 120px 0 25rem 0; 
   min-height: 100vh;
+  background: linear-gradient(180deg, #093f56 0%, #e3d9a2 100%);
 }
 
 .dark .place-page {
-  background: #121212;
+  background: #1c1c1c;
+}
+
+.page-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/path-to-penang-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 1rem;
+  margin: 0 3rem 1rem 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+
+@media screen and (max-width: 768px) {
+  .place-page {
+    padding-top: 90px;
+  }
+
+  .page-header {
+    margin: 0 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
 }

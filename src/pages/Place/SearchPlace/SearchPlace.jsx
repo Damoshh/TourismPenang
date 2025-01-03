@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import PlaceCard from '../../../components/Card/PlaceCard';
+import PlaceCard from '../PlaceCard/PlaceCard';
 import allPlaces from '../ListPlaces/allPlaces';
-import penangBg from '../../../assets/logoPenang.jpg'; // Add your background image
 import './SearchPlace.css';
 
 const SearchPlace = () => {
@@ -19,15 +18,15 @@ const SearchPlace = () => {
     { id: 'entertainment', label: 'Entertainment', icon: '🎭' }
   ];
 
-  // Calculate stats
+  
   const stats = {
     totalPlaces: allPlaces.length,
-    totalCategories: categories.length - 1, // Excluding 'all'
+    totalCategories: categories.length - 1, 
     topRated: allPlaces.filter(place => place.rating >= 4).length,
     locations: new Set(allPlaces.map(place => place.location)).size
   };
 
-  // Filter places based on search queries and selected category
+  
   const filteredPlaces = allPlaces.filter(place => {
     const matchesPlace = !placeQuery || 
       place.title.toLowerCase().includes(placeQuery.toLowerCase());
@@ -38,7 +37,7 @@ const SearchPlace = () => {
     return matchesPlace && matchesLocation && matchesCategory;
   });
 
-  // Handle image navigation for cards
+  
   const handleImageNav = (placeId, direction) => {
     setCurrentImageIndexes(prev => {
       const currentIndex = prev[placeId] || 0;
@@ -56,29 +55,16 @@ const SearchPlace = () => {
     });
   };
 
-  // Handle search form submission
   const handleSearch = (e) => {
     e.preventDefault();
-    // Additional search functionality can be added here
   };
 
-  // Update document title when component mounts
   useEffect(() => {
     document.title = 'Discover Penang - Find Places';
   }, []);
 
   return (
     <>
-      <div 
-        className="page-header"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${penangBg})`
-        }}
-      >
-        <h1>Discover Penang's Finest</h1>
-        <p>Explore the best places to eat, stay, and experience in Penang. From local delicacies to cultural landmarks, find your next destination here.</p>
-      </div>
-
       <div className="stats-container">
         <div className="stat-card">
           <div className="stat-number">{stats.totalPlaces}</div>
@@ -135,15 +121,14 @@ const SearchPlace = () => {
 
       {filteredPlaces.length === 0 ? (
         <div className="no-results">
-          <p>No places found matching your search criteria</p>
+          <p>No places found in your searching</p>
           <button 
             onClick={() => {
               setPlaceQuery('');
               setLocationQuery('');
               setSelectedCategory('all');
             }}
-            className="search-button"
-            style={{ marginTop: '1rem' }}
+            className="clear-button"
           >
             Clear Filters
           </button>

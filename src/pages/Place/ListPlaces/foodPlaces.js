@@ -1,5 +1,3 @@
-import imgRst1 from '../../../assets/imgRst1.jpg';
-import imgRst2 from '../../../assets/imgRst2.jpg';
 import imgRst3 from '../../../assets/imgRst3.jpg';
 import imgRst4 from '../../../assets/imgRst4.jpg';
 import imgRst5 from '../../../assets/imgRst5.jpg';
@@ -30,7 +28,7 @@ const foodPlaces = [
     },
     {
       id: 42,
-      title: "Ali Nasi Lemak Daun Pisang",
+      title: "Ali Nasi Lemak",
       category: "food",
       images: [imgRst9, imgRst10],
       location: "George Town, Penang",
