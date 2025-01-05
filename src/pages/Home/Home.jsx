@@ -10,8 +10,11 @@ import imgCard4 from '../../assets/card4.jpg';
 import imgCard5 from '../../assets/card5.jpg';
 import imgCard6 from '../../assets/card6.jpg';
 import imgCard7 from '../../assets/card7.jpg';
+import imgCard8 from '../../assets/card8.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import EventCard from '../Event/EventCard/EventCard.jsx';
+import EventList from '../Event/EventList.js';
 
 const responsive = {
     superLargeDesktop: {
@@ -21,7 +24,7 @@ const responsive = {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
       partialVisibilityGutter: 30,
     },
     tablet: {
@@ -35,6 +38,9 @@ const responsive = {
       partialVisibilityGutter: 10,
     },  
 };
+
+const currentEvents = EventList.filter(event => event.status === "HAPPENING NOW");
+const upcomingEvents = EventList.filter(event => event.status === "COMING SOON");
 
 const Home = () => {
   return (
@@ -82,29 +88,58 @@ const Home = () => {
           <Card
             imgSrc={imgCard4}
             title="Culture"
-            text="Visit Kek Lok Si, one of Southeast Asia's largest Buddhist temples."
+            text="Discover our culture. Visit Kek Lok Si, one of Southeast Asia's largest Buddhist temples."
             link="/place"
           />
           <Card
             imgSrc={imgCard5}
             title="Nature"
-            text="Explore Penang National Park, home to lush greenery and wildlife."
+            text="Escape the busy and hectic town. Explore the National Park, home to lush greenery and wildlife."
             link="/place"
           />
           <Card
             imgSrc={imgCard6}
             title="Entertainment"
-            text="Fill in your trip with some entertainment in Penang."
+            text="Avoid dull days by filling in your trip with some entertainment in Penang."
             link="/place"
           />
           <Card
             imgSrc={imgCard7}
             title="Food"
-            text="Feast on the famous Nasi Kandar, a must-try meal if you are visiting."
+            text="Feeling hungry? Feast on the famous Nasi Kandar, a must-try meal if you are visiting."
+            link="/place"
+          />
+          <Card
+            imgSrc={imgCard8}
+            title="Hotels"
+            text="Stay comfortable during your visit."
             link="/place"
           />
         </Carousel>
       </div>
+      <div className="home-events-preview">
+        <h2>Events in Penang</h2>
+        <p>Catch the latest happenings in Penang!</p>
+
+        <div className="events-preview-container">
+          {currentEvents.length > 0 && (
+            <>
+              <h3 className="events-preview-title">Happening Now</h3>
+              <div className="events-preview-cards">
+                {currentEvents.slice(0, 2).map(event => ( // Show a preview (e.g., first 2)
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+        <button className="learn-more-btn" onClick={() => window.location.href = '/events'}>
+          View All Events
+        </button>
+      </div>
+      <button className="learn-more-btn" onClick={() => window.location.href = '/events'}>
+        View All Events
+      </button>
     </>
   );
 };

@@ -79,3 +79,91 @@
     padding: 0; /* Remove padding for very small screens */
   }
 }
+
+.home-events {
+  background-color: #ffffff;
+  padding: 2rem 10px; /* Add padding to match other sections */
+  text-align: center;
+  color: #333;
+  max-width: 1200px; /* Consistent width */
+  margin: 2rem auto; /* Center align and add spacing */
+}
+
+.home-events h2 {
+  font-size: 2rem;
+  color: #007bff; /* Consistent header color */
+  text-align: center;
+  margin-bottom: 1rem; /* Spacing below the header */
+}
+
+.home-events p {
+  font-size: 1rem;
+  line-height: 1.6; /* Consistent line spacing */
+  margin-top: 1rem; /* Add spacing above the paragraph */
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  padding: 0.8rem 1.5rem; /* Padding for the button */
+  font-size: 1rem; /* Font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 1.5rem; /* Spacing above the button */
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.home-events-preview {
+  background-color: #ffffff;
+  padding: 2rem 10px;
+  text-align: center;
+  color: #333;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.home-events-preview h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.events-preview-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.events-preview-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
+}
