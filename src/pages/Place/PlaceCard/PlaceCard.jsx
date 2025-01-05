@@ -27,12 +27,13 @@ const PlaceCard = ({ place, currentImageIndex = 0, onImageNav }) => {
       <div className="card-content">
         <h3 className="card-title">{place.title}</h3>
         <div className="card-location">
-          <i className='fa-solid fa-map-pin'/>
           <a 
             href={place.locationLink}
             target="_blank"
+            className='card-location-a'
           >
-            {place.location}
+            <i className='fa-solid fa-map-pin'/>
+            <span>{place.location}</span>
           </a>
         </div>
         <div className="card-info-row">

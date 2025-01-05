@@ -1,78 +1,68 @@
-.event-page{
+.event-page {
   padding-bottom: 5rem;
+  margin-top: 1rem;
   min-height: 100vh;
   background: linear-gradient(180deg, #093f56 0%, #e3d9a2 100%);
 }
 
-/* Container Styles */
-.event-container {
-  max-width: 900px; /* Reduced max-width */
-  margin: 0 auto;
-  padding: 1rem;
+.dark .event-page {
+  background: #1c1c1c;
 }
 
-/* Section Styles */
-.events-section {
-  margin-bottom: 1.5rem;
-}
-
-.section-title {
-  font-size: 1.25rem;
-  color: #333;
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
-}
-
-.dark .section-title {
-  color: #dfbd27;
-}
-
-/* Status Dot */
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-right: 0.75rem;
-}
-
-/* Live Now Banner */
-.live-now-banner {
-  background: #22c55e;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+.category-title {
+  color: #055972; 
+  background-color: #c6c4a3; 
+  padding: 1rem 1rem;
+  margin: 1rem 0.3rem 1rem 0.3rem;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font-size: 1.5rem; 
+  font-weight: bold; 
   text-align: center;
-  font-size: 0.9rem;
+}
+
+.dark .category-title {
+  color: #dfbd27;
+  background-color: #232424;
+}
+
+.event-card {
+  min-width: 300px;
+  max-width: 350px; 
+  width: 100%;      
+  margin: 10px auto; 
+}
+
+
+.react-multi-carousel-item {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  padding: 0 10px;  
 }
 
-.dark .live-now-banner {
-  background: #166534;
+.react-multiple-carousel__arrow {
+  z-index: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 640px) {
-  .event-container {
-      padding: 0.75rem;
-  }
-
-  .section-title {
-      font-size: 1.1rem;
-  }
+.events-wrapper{
+  padding: 1.5rem;
 }
 
-@media (max-width: 480px) {
-  .event-container {
-      padding: 0.5rem;
+@media (max-width: 780px) {
+  .event-page {
+    padding-bottom: 1rem;
+    margin-top: 1.8rem;
   }
 
-  .live-now-banner {
-      font-size: 0.8rem;
-      padding: 0.4rem;
+  .category-title {
+    padding: 1rem 1rem;
+    margin: 0.5rem 0.3rem 0.2rem 0.3rem;
+    font-size: 1rem; 
+    text-align: center;
   }
+  .events-wrapper{
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+
 }

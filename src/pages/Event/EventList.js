@@ -6,88 +6,193 @@ import img4 from '../../assets/raya.jpg';
 const EventList = [
     {
         id: 1,
-        title: "Penang Food Festival",
+        title: "Christmas Food Market",
         img: img1,
-        description: "Experience the best of Penang's culinary delights at this amazing food festival. Sample local delicacies and international cuisine.",
-        startDate: "2025-01-01",
-        endDate: "2025-01-03",
+        description: "Join us for festive treats and holiday cheer.",
+        startDate: "2024-12-20", 
+        endDate: "2025-01-10",    
         location: "Georgetown, Penang",
-        highlights: [
-            "Local Street Food",
-            "Cooking Demonstrations",
-            "Chef Competitions",
-            "Food Workshops"
-        ]
+        locationLink: "https://maps.app.goo.gl/xawSgqgm45CU34jVA"
     },
     {
         id: 2,
-        title: "Heritage Walking Tour",
+        title: "New Year Heritage Walk",
         img: img2,
-        description: "Join our daily heritage walking tours through the historic streets of Georgetown. Learn about the rich history and culture of Penang.",
-        startDate: "2024-12-15",
-        endDate: "2025-02-15",
+        description: "Explore Georgetown's historic streets.",
+        startDate: "2024-01-15", 
+        endDate: "2025-01-15",   
         location: "Georgetown Heritage Area",
-        highlights: [
-            "Professional Guide",
-            "Historical Sites",
-            "Cultural Stories",
-            "Photo Opportunities"
-        ]
+        locationLink: "https://maps.app.goo.gl/vwrQpt7ek75qgwcy6"
     },
+
     {
         id: 3,
         title: "Chinese New Year Festival",
         img: img3,
-        description: "Immerse yourself in the vibrant traditions of Chinese New Year. Experience the rich cultural celebrations with lion dances, temple visits, and traditional performances.",
-        startDate: "2025-02-09",
-        endDate: "2025-02-24",
-        location: "Armenian Street & Heritage Zone",
-        highlights: [
-            "Lion Dance Performances",
-            "Traditional Market",
-            "Cultural Shows",
-            "Temple Fair"
-        ]
+        description: "Traditional celebrations and performances.",
+        startDate: "2024-02-09",  
+        endDate: "2024-02-24",
+        location: "Armenian Street",
+        locationLink: "https://maps.app.goo.gl/tcUg2VdqD5WvzoNb6"
     },
     {
         id: 4,
-        title: "Hari Raya Aidilfitri",
+        title: "Hari Raya Open House",
         img: img4,
-        description: "Celebrate the joyous occasion of Hari Raya with the community. Experience the warmth of Malaysian hospitality with open houses and cultural festivities.",
-        startDate: "2025-04-22",
+        description: "Experience Malaysian hospitality.",
+        startDate: "2025-01-22", 
         endDate: "2025-04-23",
         location: "Various locations in Penang",
-        highlights: [
-            "Open House Celebrations",
-            "Traditional Cuisine",
-            "Cultural Performances",
-            "Community Gatherings"
-        ]
+        locationLink: "https://maps.app.goo.gl/MhHT8p9vEpqi7AxD7"
+    },
+
+    {
+        id: 5,
+        title: "Mid-Autumn Festival",
+        img: img1,
+        description: "Lantern festival and mooncakes.",
+        startDate: "2024-09-15",
+        endDate: "2024-09-17",
+        location: "Esplanade, Penang",
+        locationLink: "https://maps.app.goo.gl/xGPi6TBCNzutbX3N9"
+    },
+    {
+        id: 6,
+        title: "Deepavali Celebration",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2024-10-25",
+        endDate: "2024-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    },
+    {
+        id: 7,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-10-25",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    }
+    ,
+    {
+        id: 7,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-10-25",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    }
+    ,
+    {
+        id: 7,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-10-25",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    },
+    {
+        id: 8,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-01-01",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    },
+    {
+        id: 79,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-01-01",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    }
+    ,    
+    {
+        id: 10,
+        title: "Deepavali ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-01-01",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    },
+    {
+        id: 11,
+        title: "lalalla ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-05-01",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
+    },    {
+        id: 12,
+        title: "ashiraa ",
+        img: img2,
+        description: "Festival of lights celebration.",
+        startDate: "2025-05-01",
+        endDate: "2025-10-27",
+        location: "Little India, Georgetown",
+        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
     }
 ];
 
-// Helper function to determine event status
 const determineEventStatus = (startDate, endDate) => {
     const now = new Date();
     const start = new Date(startDate);
     const end = new Date(endDate);
     
-    // For demo purposes, let's make the Heritage Walking Tour appear as happening now
+    const timeUntilStart = start - now;
+    const timeUntilEnd = end - now;
+    
+    const formatTime = (milliseconds) => {
+        const days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((milliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
+        
+        return `${days} day ${hours} hour ${minutes} minute ${seconds} second`;
+    };
+    
     if (start <= now && now <= end) {
-        return "HAPPENING NOW";
+        return {
+            status: "LIVE NOW",
+            timeLeft: timeUntilEnd,
+            message: `Event will end in ${formatTime(timeUntilEnd)}`
+        };
     } else if (now < start) {
-        return "COMING SOON";
+        return {
+            status: "COMING SOON",
+            timeLeft: timeUntilStart,
+            message: `Starts in ${formatTime(timeUntilStart)}`
+        };
     } else {
-        return "ENDED";
+        return {
+            status: "ENDED",
+            timeLeft: 0,
+            message: "The event has ended"
+        };
     }
 };
 
-// Add status and formatted dates to each event
 const processedEventList = EventList.map(event => {
-    const status = determineEventStatus(event.startDate, event.endDate);
+    const eventStatus = determineEventStatus(event.startDate, event.endDate);
     return {
         ...event,
-        status,
+        ...eventStatus,
         displayDate: `${new Date(event.startDate).toLocaleDateString('en-US', {
             month: 'long',
             day: 'numeric',
@@ -100,4 +205,4 @@ const processedEventList = EventList.map(event => {
     };
 });
 
-export default processedEventList;
+export default processedEventList;  

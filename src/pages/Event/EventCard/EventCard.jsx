@@ -1,124 +1,85 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './EventCard.css';
 
 const EventCard = ({ event }) => {
-    const [timeLeft, setTimeLeft] = useState({});
-
-    const calculateTimeLeft = () => {
-        const eventStart = new Date(event.startDate);
-        const now = new Date();
-        const difference = eventStart - now;
-
-        if (difference > 0) {
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((difference / 1000 / 60) % 60);
-            const seconds = Math.floor((difference / 1000) % 60);
-
-            return { days, hours, minutes, seconds };
-        }
-
-        return null;
-    };
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
     useEffect(() => {
-        if (event.status === "COMING SOON") {
-            const timer = setInterval(() => {
-                setTimeLeft(calculateTimeLeft());
-            }, 1000);
+        if (event.status === "ENDED") return;
 
-            return () => clearInterval(timer);
-        }
+        const timer = setInterval(() => {
+            const now = new Date();
+            const target = new Date(event.status === "LIVE NOW" ? event.endDate : event.startDate);
+            const difference = target - now;
+
+            setTimeLeft({
+                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((difference % (1000 * 60)) / 1000)
+            });
+        }, 1000);
+
+        return () => clearInterval(timer);
     }, [event]);
 
-    const getStatusIndicator = () => {
-        switch(event.status) {
-            case "HAPPENING NOW":
-                return (
-                    <div className="live-indicator">
-                        <i className="fas fa-broadcast-tower"></i>
-                        <span>Live Now</span>
-                    </div>
-                );
-            case "COMING SOON":
-                return timeLeft && (
-                    <div className="countdown-container">
-                        <div className="countdown-item">
-                            <span className="countdown-number">{timeLeft.days}</span>
-                            <span className="countdown-label">Days</span>
-                        </div>
-                        <div className="countdown-item">
-                            <span className="countdown-number">{timeLeft.hours}</span>
-                            <span className="countdown-label">Hours</span>
-                        </div>
-                        <div className="countdown-item">
-                            <span className="countdown-number">{timeLeft.minutes}</span>
-                            <span className="countdown-label">Minutes</span>
-                        </div>
-                        <div className="countdown-item">
-                            <span className="countdown-number">{timeLeft.seconds}</span>
-                            <span className="countdown-label">Seconds</span>
-                        </div>
-                    </div>
-                );
-            case "ENDED":
-                return (
-                    <div className="ended-indicator">
-                        <i className="fas fa-check-circle"></i>
-                        <span>Event Completed</span>
-                    </div>
-                );
-            default:
-                return null;
-        }
-    };
-
     return (
-        <div className={`event-card ${event.status.toLowerCase().replace(' ', '-')}`}>
+        <div className="event-card">
             <div className="event-image">
                 <img src={event.img} alt={event.title} />
-                {event.status === "ENDED" && <div className="ended-overlay"></div>}
             </div>
             
             <div className="event-content">
-                <div>
-                    <div className="event-header">
-                        <h2 className="event-title">{event.title}</h2>
-                        <span className={`event-status status-${event.status.toLowerCase().replace(' ', '-')}`}>
-                            {event.status}
-                        </span>
-                    </div>
-
-                    {getStatusIndicator()}
-
-                    <div className="event-info">
-                        <div className="info-item">
-                            <i className="fas fa-calendar-alt"></i>
-                            <span>{event.displayDate}</span>
+                <h2 className="event-title">{event.title}</h2>
+                
+                <div className="status-container">
+                    <span className={`event-status status-${event.status.toLowerCase().replace(/\s+/g, '-')}`}>
+                        {event.status}
+                    </span>
+                        
+                    {event.status !== "ENDED" && (
+                        <div className="countdown-display">
+                            <div className="countdown-item">
+                                <span className="countdown-value">{timeLeft.days}</span>
+                                <span className="countdown-label">Day</span>
+                            </div>
+                            <div className="countdown-item">
+                                <span className="countdown-value">{String(timeLeft.hours).padStart(2, '0')}</span>
+                                <span className="countdown-label">Hour</span>
+                            </div>
+                            <div className="countdown-item">
+                                <span className="countdown-value">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                                <span className="countdown-label">Min</span>
+                            </div>
+                            <div className="countdown-item">
+                                <span className="countdown-value">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                                <span className="countdown-label">Sec</span>
+                            </div>
                         </div>
-                        <div className="info-item">
-                            <i className="fas fa-map-marker-alt"></i>
-                            <span>{event.location}</span>
-                        </div>
-                    </div>
-
-                    <p className="event-description">{event.description}</p>
+                    )}
                 </div>
 
-                {event.status === "ENDED" ? (
-                    <div className="recap-button">
-                        <Link to="/Place" className="event-button ended">
-                            View Recap
-                            <i className="fas fa-photo-video"></i>
-                        </Link>
+                <div className="event-info">
+                    <div className="info-item">
+                        <i className="fas fa-calendar-alt"></i>
+                        <span>{event.displayDate}</span>
                     </div>
-                ) : (
-                    <Link to="/Place" className="event-button">
-                        Learn More
-                        <i className="fas fa-arrow-right"></i>
-                    </Link>
-                )}
+                    <a 
+                        href={event.locationLink} 
+                        target="_blank" 
+                        className='event-location'
+                    >
+                        <i className="fas fa-map-marker-alt"></i>
+                        <span>{event.location}</span>
+                    </a>
+                </div>
+
+                <p className="event-description">{event.description}</p>
             </div>
         </div>
     );

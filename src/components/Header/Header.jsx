@@ -5,6 +5,7 @@ const Header = ({ headerImg, title, text }) => {
   return (
     <div className="home-container">
       <img className="home-background" src={headerImg} alt=""/>
+      <div className="gradient-overlay"></div>
       <div className="home-overlay">
         <h1 className="home-title">{title}</h1>
         <p className="home-subtitle">{text}</p>
@@ -13,4 +14,4 @@ const Header = ({ headerImg, title, text }) => {
   );
 };
 
-export default Header;
+export default Header

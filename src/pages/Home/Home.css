@@ -1,18 +1,39 @@
 
+.home-page{
+  background: linear-gradient(180deg, #003f56 0%, #e3d9a2 100%);
+  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.dark .home-page{
+  background: #1c1c1c;
+}
+
 .about-penang {
-  background-color: #ffffff;
-  padding: 2rem 10px; /* Add padding to match the card container */
+  background-color: #c6c4a3;
+  padding: 1rem 5rem 2rem 5rem;
   text-align: center;
-  color: #333;
-  max-width: 1200px; /* Same as the card container */
-  margin: 0 auto; /* Center align */
+  color: #222222;
+  align-items: center;
+  margin: 1rem 2rem 2rem 2rem; 
+  border-radius: 15px;
+}
+
+.dark .about-penang{
+  background-color: #232424;
+  color: #bebeb9;
 }
 
 .about-penang h2{
   font-size: 2rem;
-  color: #007bff;
+  color: #055972;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.dark .about-penang h2{
+  color: #dfbd27;
 }
 
 .about-penang p {
@@ -31,15 +52,25 @@
 
 .rec-penang{
   font-size: 2rem;
-  color: #007bff;
+  color: #055972;
   text-align: center;
-  padding: auto;
-  margin: 2rem auto; 
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 1rem auto; 
+}
+
+.dark .rec-penang{
+  color: #dfbd27;
 }
 
 .carousel-container {
-  margin: 2rem auto; /* Add spacing above the carousel */
-  padding: 0 10px;
+  padding: 0rem 1.5rem 3rem 1.5rem;
+  background-color: #c6c4a3;
+  margin: 1rem 2rem 0.5rem 2rem; 
+  border-radius: 15px;
+}
+
+.dark .carousel-container{
+  background-color: #232424;
 }
 
 @media (max-width: 768px) {
@@ -60,75 +91,75 @@
   }
 
   .rec-penang {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-    margin: 1.5rem auto; /* Adjust margin for spacing */
+    font-size: 1.5rem; 
+    margin: 1.5rem auto; 
   }
 
   .carousel-container {
-    padding: 0 5px; /* Reduce padding for smaller screens */
+    padding: 0 5px; 
   }
 }
 
 @media (max-width: 480px) {
   .rec-penang {
-    font-size: 1.2rem; /* Further reduce font size for very small screens */
-    margin: 1rem auto; /* Adjust margin for compact spacing */
+    font-size: 1.2rem; 
+    margin: 1rem auto; 
   }
 
   .carousel-container {
-    padding: 0; /* Remove padding for very small screens */
+    padding: 0; 
   }
 }
 
 .home-events {
-  background-color: #ffffff;
-  padding: 2rem 10px; /* Add padding to match other sections */
+  background-color: #efe5e5;
+  padding: 2rem 10px; 
   text-align: center;
   color: #333;
-  max-width: 1200px; /* Consistent width */
-  margin: 2rem auto; /* Center align and add spacing */
+  max-width: 1200px; 
+  margin: 2rem auto; 
 }
 
 .home-events h2 {
   font-size: 2rem;
-  color: #007bff; /* Consistent header color */
+  color: #007bff; 
   text-align: center;
-  margin-bottom: 1rem; /* Spacing below the header */
+  margin-bottom: 1rem; 
 }
 
 .home-events p {
   font-size: 1rem;
-  line-height: 1.6; /* Consistent line spacing */
-  margin-top: 1rem; /* Add spacing above the paragraph */
+  line-height: 1.6; 
+  margin-top: 1rem; 
 }
 
 .learn-more-btn {
   display: inline-block;
-  background-color: #007bff; /* Button color */
-  color: #fff; /* Text color */
-  padding: 0.8rem 1.5rem; /* Padding for the button */
-  font-size: 1rem; /* Font size */
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 0.8rem 1.5rem; 
+  font-size: 1rem; 
   font-weight: bold;
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; 
   text-align: center;
-  cursor: pointer; /* Pointer cursor on hover */
-  margin-top: 1.5rem; /* Spacing above the button */
+  cursor: pointer; 
+  margin-top: 1.5rem; 
   text-decoration: none;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 .learn-more-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3; 
 }
 
 .home-events-preview {
   background-color: #ffffff;
-  padding: 2rem 10px;
+  padding: 2rem 2rem;
   text-align: center;
   color: #333;
-  max-width: 1200px;
-  margin: 2rem auto;
+  align-items: center;
+  margin: 2rem 2rem;
 }
 
 .home-events-preview h2 {

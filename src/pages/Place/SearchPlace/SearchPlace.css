@@ -49,7 +49,7 @@
   background: #c6c4a3;
   padding: 2rem;
   border-radius: 1rem;
-  margin: 0 3rem 2rem 3rem;
+  margin: 0 2rem 1rem 2rem;
   border: 1px solid #c6c4a3;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -180,7 +180,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
@@ -201,16 +201,32 @@
 
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
+    margin: 0.5rem 1rem;
+    display: grid;
+    gap: 0.5rem;
   }
 
-  .filters-section {
-    margin: 0 1rem 1.5rem 1rem;
+  .stat-card {
     padding: 1.5rem;
+    min-height: 150px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+ 
+ .stat-label {
+   font-size: 0.9rem;
+ }
+
+  .filters-section {
+    margin: 0 1rem 1rem 1rem;
+    padding: 1.2rem;
   }
 
   .search-inputs {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   .search-button {
@@ -219,18 +235,23 @@
   }
 
   .clear-button {
-    width: 50%;
-    padding: 0.5rem;
+   width: 40%;
+   margin: 1rem auto;
+   display: block;
   }
 
   .cards-grid {
     grid-template-columns: 1fr;
-    padding: 0 1rem;
-    gap: 1rem;
+    padding: 0rem 1rem;
+    gap: 0rem;
   }
 
   .category-button {
     padding: 0.4rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .categories-container {
+    gap: 0.5rem;
   }
 }

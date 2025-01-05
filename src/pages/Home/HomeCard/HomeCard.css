@@ -1,14 +1,21 @@
 .home-card {
-    border: 1px solid hsla(0, 0%, 80%, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
     padding: 20px;
     text-align: center;
     max-width: 250px;
-    background-color: #fff;
+    background-color: #def4f4;
+    position: relative;
+    min-height: 400px;  
+    display: flex;      
+    flex-direction: column; 
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 5px;
   }
+
+  .dark .home-card{
+    background: #ffffff0d;
+}
   
   .home-card:hover {
     transform: translateY(-5px);
@@ -33,9 +40,13 @@
 .card-text {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
-    color: hsl(0, 0%, 40%);
+    color: #222222;
     text-align: justify;
     margin-bottom: 15px;
+}
+
+.dark .card-text{
+    color: #bebeb9;
 }
 
 .card-btn {
@@ -44,13 +55,17 @@
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    color: #fff;
-    background-color: hsl(49, 74%, 51%);
+    color: #444242;
+    background-color: #9ebfeb;
+    position: absolute;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    bottom: 20px;       
+    left: 50%;          
+    transform: translateX(-50%); 
 }
 
-.card-btn:hover {
-    background-color: hsl(49, 74%, 40%);
+.dark .card-btn {
+    color: #dcdee0;
+    background-color: #2d3748;
 }

@@ -1,265 +1,207 @@
-/* Main Container */
-.event-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  /* Event Sections */
-  .events-section {
-    margin-bottom: 1.5rem;
-  }
-  
-  .section-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
-    margin: 1.5rem 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .dark .section-title {
-    color: #dfbd27;
-  }
-  
-  /* Event Card */
-  .event-card {
-    background: white;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    height: 160px;
-    transition: transform 0.2s ease;
-  }
-  
-  .event-card:hover {
-    transform: translateY(-2px);
-  }
-  
-  .dark .event-card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-  }
-  
-  /* Image Styles */
-  .event-image {
-    width: 160px;
-    min-width: 160px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .event-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .event-card:hover .event-image img {
-    transform: scale(1.05);
-  }
-  
-  /* Content Area */
-  .event-content {
-    flex: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* Event Header */
-  .event-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-  
-  .dark .event-title {
-    color: #dfbd27;
-  }
-  
-  /* Status Badges */
-  .event-status {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.7rem;
-    font-weight: 500;
-  }
-  
-  .status-happening {
-    background: #22c55e;
-    color: white;
-  }
-  
-  .status-coming {
-    background: #dfbd27;
-    color: black;
-  }
-  
-  .status-ended {
-    background: #6b7280;
-    color: white;
-  }
-  
-  /* Live Now Banner */
-  .live-now-banner {
-    background: #22c55e;
-    color: white;
-    padding: 0.75rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .dark .live-now-banner {
-    background: #166534;
-  }
-  
-  /* Event Info */
-  .event-info {
-    display: flex;
-    gap: 1rem;
-    margin: 0.5rem 0;
-  }
-  
-  .info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #666;
-    font-size: 0.8rem;
-  }
-  
-  .info-item i {
-    color: #dfbd27;
-    font-size: 0.8rem;
-  }
-  
-  .dark .info-item {
-    color: #aaa;
-  }
-  
-  /* Description */
-  .event-description {
-    font-size: 0.8rem;
-    color: #666;
-    line-height: 1.4;
-    margin: 0.5rem 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  .dark .event-description {
-    color: #aaa;
-  }
-  
-  /* Countdown */
-  .countdown-container {
-    display: flex;
-    gap: 0.75rem;
-    margin: 0.5rem 0;
-  }
-  
-  .countdown-item {
-    text-align: center;
-  }
-  
-  .countdown-number {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #dfbd27;
-  }
-  
-  .countdown-label {
-    font-size: 0.6rem;
-    color: #666;
-    text-transform: uppercase;
-  }
-  
-  /* Button */
-  .event-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #dfbd27;
-    color: black;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  
-  .event-button:hover {
-    background: #c4a622;
-    transform: translateX(3px);
-  }
-  
-  .event-button i {
-    font-size: 0.8rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .event-card {
-      height: auto;
-    }
-  
-    .event-image {
-      width: 120px;
-      min-width: 120px;
-    }
-  
-    .event-content {
-      padding: 0.75rem;
-    }
-  
-    .event-info {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .countdown-container {
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .event-container {
-      padding: 0.75rem;
-    }
-  
-    .event-image {
-      width: 100px;
-      min-width: 100px;
-    }
-  
-    .event-title {
-      font-size: 0.9rem;
-    }
-  
-    .event-description {
-      font-size: 0.75rem;
-      -webkit-line-clamp: 2;
-    }
-  
-    .event-button {
-      padding: 0.4rem 0.75rem;
-      font-size: 0.75rem;
-    }
-  }
+.event-card {
+  min-width: 300px;
+  background: #def4f4;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin: 10px;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+}
+
+.dark .event-card {
+  background: #ffffff0d;
+  border-color: #2d3748;
+  border: 1px solid #333;
+}
+
+.event-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0; 
+}
+
+.event-image img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0; 
+  transition: transform 0.3s;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-content {
+  padding: 1rem;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+.dark .event-title {
+  color: #dfbd27;
+}
+
+.status-container {
+  display: list-item;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.event-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.6rem;
+  border: 1px solid;
+  font-weight: 500;
+}
+
+.status-live-now {
+  color: #000000;
+  background-color: #22c55e;
+  border: #22c55e;
+}
+
+.status-coming-soon {
+  color: #000000;
+  background-color: #d8c621;
+  border: #d8c621;
+}
+
+.status-ended {
+  color: #000000 ;
+  background-color: #b3b9bd;
+  border: #b3b9bd;
+}
+
+.event-info {
+  display: list-item;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  color: #3b82f6;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.info-item span{
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.info-item i {
+  color: #03009d;
+}
+
+.dark .info-item {
+  color: #9ed6de;
+}
+
+.dark .info-item i {
+  color: #9ed6de;
+}
+
+
+.event-description {
+  font-size: 0.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.dark .event-description {
+  color: #b5bdbe;
+}
+
+.event-location{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.event-location span{
+  margin-left: 10px;
+  color: #3b82f6;
+}
+
+.event-location span:hover{
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.event-location i{
+  margin-left: 2px;
+  color: #03009d;
+}
+
+.dark .event-location span{
+  color: #9ed6de;
+}
+
+.dark .event-location span:hover{
+  color: #54cbdd;
+  text-decoration: underline;
+}
+
+.dark .event-location i{
+  margin-left: 2px;
+  color: #9ed6de;
+}
+
+.countdown-display {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+  background: transparent;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.countdown-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.dark .countdown-value {
+  color: #dfbd27;
+}
+
+.countdown-label {
+  font-size: 0.6rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.dark .countdown-label {
+  color: #888;
+}
+
+.event-card.ended .countdown-display {
+  display: none;
+}

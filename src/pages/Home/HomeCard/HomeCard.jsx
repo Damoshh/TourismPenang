@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import './HomeCard.css';
 
 function Card({ imgSrc, title, text, link }) {
   return (
