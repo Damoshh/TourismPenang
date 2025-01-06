@@ -13,8 +13,8 @@ import imgCard7 from '../../assets/card7.jpg';
 import imgCard8 from '../../assets/card8.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import EventCard from '../Event/EventCard/EventCard.jsx';
-import EventList from '../Event/EventList.js';
+import EventCard from '../Event/EventCard/EventCard.jsx'; // Import EventCard
+import EventList from '../Event/EventList';
 
 const responsive = {
     superLargeDesktop: {
@@ -39,10 +39,14 @@ const responsive = {
     },  
 };
 
-const currentEvents = EventList.filter(event => event.status === "HAPPENING NOW");
-const upcomingEvents = EventList.filter(event => event.status === "COMING SOON");
-
 const Home = () => {
+  const previewEvent = EventList.find(event => {
+    const now = new Date();
+    const start = new Date(event.startDate);
+    const end = new Date(event.endDate);
+    return now >= start && now <= end; // Pick an ongoing event
+  }) || EventList[0];
+  
   return (
     <>
       <Header
@@ -121,19 +125,34 @@ const Home = () => {
           <h2>Events in Penang</h2>
           <p>Catch the latest happenings in Penang!</p>
 
-          <div className="events-preview-container">
-            {currentEvents.length > 0 && (
-              <>
-                <h3 className="events-preview-title">Happening Now</h3>
-                <div className="events-preview-cards">
-                  {currentEvents.slice(0, 2).map(event => ( // Show a preview (e.g., first 2)
-                    <EventCard key={event.id} event={event} />
-                  ))}
+          <div className="events-preview-cards">
+            {previewEvent && (
+                <div className="wide-event-card">
+                    <div className="wide-event-image">
+                        <img src={previewEvent.img} alt={previewEvent.title} />
+                    </div>
+                    <div className="wide-event-content">
+                        <h2 className="event-title">{previewEvent.title}</h2>
+                        <div className="event-info">
+                            <div className="info-item">
+                                <i className="fas fa-calendar-alt"></i>
+                                <span>{previewEvent.displayDate}</span>
+                            </div>
+                            <a 
+                                href={previewEvent.locationLink} 
+                                target="_blank" 
+                                className="event-location"
+                            >
+                                <i className="fas fa-map-marker-alt"></i>
+                                <span>{previewEvent.location}</span>
+                            </a>
+                        </div>
+                        <p className="event-description">{previewEvent.description}</p>
+                    </div>
                 </div>
-              </>
             )}
           </div>
-          <button className="learn-more-btn" onClick={() => window.location.href = '/events'}>
+          <button className="view-all-btn" onClick={() => window.location.href = '/event'}>
             View All Events
           </button>
         </div>

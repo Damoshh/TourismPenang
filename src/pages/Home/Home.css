@@ -41,10 +41,6 @@
   line-height: 1.6;
 }
 
-.home-card {
-  margin: 10px; 
-}
-
 .react-multi-carousel-item {
   display: flex;
   justify-content: center;
@@ -111,77 +107,23 @@
   }
 }
 
-.home-events {
-  background-color: #efe5e5;
-  padding: 2rem 10px; 
-  text-align: center;
-  color: #333;
-  max-width: 1200px; 
-  margin: 2rem auto; 
-}
-
-.home-events h2 {
-  font-size: 2rem;
-  color: #007bff; 
-  text-align: center;
-  margin-bottom: 1rem; 
-}
-
-.home-events p {
-  font-size: 1rem;
-  line-height: 1.6; 
-  margin-top: 1rem; 
-}
-
-.learn-more-btn {
-  display: inline-block;
-  background-color: #007bff; 
-  color: #fff; 
-  padding: 0.8rem 1.5rem; 
-  font-size: 1rem; 
-  font-weight: bold;
-  border: none;
-  border-radius: 5px; 
-  text-align: center;
-  cursor: pointer; 
-  margin-top: 1.5rem; 
-  text-decoration: none;
-  transition: background-color 0.3s ease; 
-}
-
-.learn-more-btn:hover {
-  background-color: #0056b3; 
-}
-
 .home-events-preview {
-  background-color: #ffffff;
-  padding: 2rem 2rem;
+  padding: 1rem;
+  background-color: #c6c4a3;
   text-align: center;
   color: #333;
   align-items: center;
   margin: 2rem 2rem;
+  border-radius: 15px;
 }
 
 .home-events-preview h2 {
   font-size: 2rem;
-  color: #007bff;
+  color: #055972;
   margin-bottom: 1rem;
 }
 
-.events-preview-title {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 1rem 0;
-}
-
-.events-preview-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.learn-more-btn {
+.view-all-btn {
   display: inline-block;
   background-color: #007bff;
   color: #fff;
@@ -195,6 +137,65 @@
   transition: background-color 0.3s ease;
 }
 
-.learn-more-btn:hover {
+.view-all-btn:hover {
   background-color: #0056b3;
+}
+
+.events-preview-cards {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  width: 100%; /* Ensure it spans the container width */
+  margin: 0 auto;
+}
+
+.wide-event-card {
+  display: flex; /* Horizontal layout */
+  flex-direction: row; /* Place image and content side by side */
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%; /* Make the card occupy 90% of the container width */
+  max-width: 1200px; /* Add a max width for larger screens */
+  margin: 10px auto;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wide-event-image {
+  flex: 1; /* Allocate 1 part of the card width to the image */
+  max-width: 40%; /* Ensure the image doesn't exceed 40% of the card width */
+  height: 100%; /* Ensure the image height matches the content height */
+  overflow: hidden;
+}
+
+.wide-event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.wide-event-content {
+  flex: 2; /* Allocate 2 parts of the card width to the content */
+  padding: 20px;
+  text-align: left; /* Align text to the left for a professional look */
+}
+
+.wide-event-content .event-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.wide-event-content .event-info {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column; /* Stack info vertically */
+  gap: 5px; /* Add spacing between elements */
+}
+
+.wide-event-content .event-description {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
 }
