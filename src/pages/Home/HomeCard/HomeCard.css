@@ -39,7 +39,7 @@
 
 .card-text {
     font-family: 'Arial', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #222222;
     text-align: justify;
     margin-bottom: 15px;
@@ -56,7 +56,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: #444242;
-    background-color: hsl(214, 66%, 77%);
+    background-color: #9ebfeb;
     position: absolute;
     border-radius: 5px;
     text-decoration: none;
@@ -65,11 +65,15 @@
     transform: translateX(-50%); 
 }
 
-.card-btn:hover {
-    background-color: hsl(214, 66%, 51%);
+.card-btn:hover{
+    background-color: #4e8fe4;
 }
 
 .dark .card-btn {
     color: #dcdee0;
-    background-color: #2d3748;
+    background-color: #2e4774;
+}
+
+.dark .card-btn:hover {
+    background-color: #4e8fe4;
 }

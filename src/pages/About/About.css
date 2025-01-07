@@ -1,12 +1,10 @@
 .about-page {
   padding-bottom: 1rem;
-  padding-top: 0.2rem;
+  padding-top: 5rem;
   min-height: 100vh;
   background: linear-gradient(180deg, #003f56 0%, #e3d9a2 100%);
   margin-top: 31px;
 }
-
-
 
 .dark .about-page {
   background: #1c1c1c;
@@ -15,5 +13,6 @@
 @media screen and (max-width: 768px) {
   .about-page {
     margin-top: 30px;
+    padding-top: 1rem;
   }
 }

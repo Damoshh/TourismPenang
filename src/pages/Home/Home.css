@@ -1,8 +1,8 @@
 .home-page {
   background: linear-gradient(180deg, #003f56 0%, #e3d9a2 100%);
   margin-top: 2rem;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
 }
 
 .dark .home-page {
@@ -17,6 +17,7 @@
   align-items: center;
   margin: 1rem 2rem 2rem 2rem; 
   border-radius: 15px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
 }
 
 .dark .about-penang {
@@ -62,113 +63,69 @@
   background-color: #c6c4a3;
   margin: 1rem 2rem 0.5rem 2rem; 
   border-radius: 15px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
 }
 
 .dark .carousel-container {
   background-color: #232424;
 }
 
-@media (max-width: 768px) {
-  .home-title {
-    font-size: 2.5rem;
-  }
-
-  .home-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .about-penang h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-penang p {
-    font-size: 0.8rem;
-  }
-
-  .rec-penang {
-    font-size: 1.5rem; 
-    margin: 1.5rem auto; 
-  }
-
-  .carousel-container {
-    padding: 0 5px; 
-  }
-}
-
-@media (max-width: 480px) {
-  .rec-penang {
-    font-size: 1.2rem; 
-    margin: 1rem auto; 
-  }
-
-  .carousel-container {
-    padding: 0; 
-  }
-}
-
 .home-events-preview {
-  padding: 1rem;
   background-color: #c6c4a3;
-  text-align: center;
-  color: #333;
-  align-items: center;
-  margin: 2rem 2rem;
+  width: calc(100% - 4rem);
+  margin: 2rem ;
+  padding: 1rem .5rem;
   border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
 }
 
-.home-events-preview h2 {
+.dark .home-events-preview {
+  background-color: #232424;
+}
+
+.title-header {
   font-size: 2rem;
   color: #055972;
-  margin-bottom: 1rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.8rem;
 }
 
-.view-all-btn {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.view-all-btn:hover {
-  background-color: #0056b3;
+.dark .title-header{
+  color: #dfbd27;
 }
 
 .events-preview-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Spacing between cards */
-  margin: 20px auto;
-  padding: 0 20px; /* Padding for better spacing */
-  max-width: 1200px; /* Limit the grid width */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .event-card {
-  display: flex; /* Horizontal alignment for each card */
+  width: 100%;
+  max-width: 350px;
+  display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   background-color: #f8f8f8;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .event-card:hover {
-  transform: scale(1.02); /* Slight zoom effect on hover */
+  transform: scale(1.02);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .event-image img {
   width: 100%;
-  height: 200px; /* Set consistent image height */
-  object-fit: cover; /* Crop the image appropriately */
+  height: 200px;
+  object-fit: cover;
 }
 
 .event-content {
@@ -184,12 +141,131 @@
 
 .event-info {
   display: flex;
-  flex-direction: column; /* Stack date and location */
+  flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
+}
+
+.info-item-loc i {
+  margin-right: 10px;
 }
 
 .event-description {
   font-size: 0.95rem;
   color: #555;
+}
+
+.event-location {
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+.event-location:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.dark .event-location{
+  color: #9ed6de;
+}
+
+.dark .event-location:hover{
+  color: #54cbdd;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background-color: #9ebfeb;
+  color: #444242;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  background-color: #4e8fe4;
+}
+.dark .view-all-btn{
+  color: #dcdee0;
+  background-color: #2e4774;
+}
+
+.dark .view-all-btn:hover{
+  background-color: #4e8fe4;
+}
+
+@media (max-width: 1200px) {
+  .events-preview-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .home-events-preview {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+
+  .events-preview-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .about-penang {
+    padding: 1rem 2rem;
+  }
+
+  .about-penang h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-penang p {
+    font-size: 0.8rem;
+  }
+
+  .rec-penang {
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .carousel-container {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-preview-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .event-card {
+    max-width: 100%;
+  }
+
+  .rec-penang {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+  }
+
+  .carousel-container {
+    padding: 0;
+  }
+
+  .home-events-preview {
+    padding: 1rem 0.5rem;
+  }
 }

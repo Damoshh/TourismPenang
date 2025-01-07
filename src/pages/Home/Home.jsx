@@ -123,9 +123,7 @@ const Home = () => {
           </Carousel>
         </div>
         <div className="home-events-preview">
-          <h2>Events in Penang</h2>
-          <p>Catch the latest happenings in Penang!</p>
-
+          <h2 className='title-header'>Events Happening Now  in Penang</h2>
           <div className="events-preview-cards">
             {ongoingEvents.length > 0 ? (
               ongoingEvents.map(event => (
@@ -140,14 +138,13 @@ const Home = () => {
                         <i className="fas fa-calendar-alt"></i>
                         <span>{event.displayDate}</span>
                       </div>
-                      <div className="info-item">
-                        <i className="fas fa-map-marker-alt"></i>
+                      <div className="info-item-loc">
                         <a 
                           href={event.locationLink} 
                           target="_blank" 
-                          rel="noopener noreferrer" 
                           className="event-location"
                         >
+                          <i className="fas fa-map-marker-alt"></i>
                           {event.location}
                         </a>
                       </div>
