@@ -1,12 +1,11 @@
-
-.home-page{
+.home-page {
   background: linear-gradient(180deg, #003f56 0%, #e3d9a2 100%);
   margin-top: 2rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
-.dark .home-page{
+.dark .home-page {
   background: #1c1c1c;
 }
 
@@ -20,19 +19,19 @@
   border-radius: 15px;
 }
 
-.dark .about-penang{
+.dark .about-penang {
   background-color: #232424;
   color: #bebeb9;
 }
 
-.about-penang h2{
+.about-penang h2 {
   font-size: 2rem;
   color: #055972;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.dark .about-penang h2{
+.dark .about-penang h2 {
   color: #dfbd27;
 }
 
@@ -46,7 +45,7 @@
   justify-content: center;
 }
 
-.rec-penang{
+.rec-penang {
   font-size: 2rem;
   color: #055972;
   text-align: center;
@@ -54,7 +53,7 @@
   margin: 1rem auto; 
 }
 
-.dark .rec-penang{
+.dark .rec-penang {
   color: #dfbd27;
 }
 
@@ -65,7 +64,7 @@
   border-radius: 15px;
 }
 
-.dark .carousel-container{
+.dark .carousel-container {
   background-color: #232424;
 }
 
@@ -142,60 +141,55 @@
 }
 
 .events-preview-cards {
-  display: flex;
-  justify-content: center; /* Center the card horizontally */
-  width: 100%; /* Ensure it spans the container width */
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Spacing between cards */
+  margin: 20px auto;
+  padding: 0 20px; /* Padding for better spacing */
+  max-width: 1200px; /* Limit the grid width */
 }
 
-.wide-event-card {
-  display: flex; /* Horizontal layout */
-  flex-direction: row; /* Place image and content side by side */
-  align-items: center;
+.event-card {
+  display: flex; /* Horizontal alignment for each card */
+  flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 90%; /* Make the card occupy 90% of the container width */
-  max-width: 1200px; /* Add a max width for larger screens */
-  margin: 10px auto;
-  background-color: #fff;
+  background-color: #f8f8f8;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
 }
 
-.wide-event-image {
-  flex: 1; /* Allocate 1 part of the card width to the image */
-  max-width: 40%; /* Ensure the image doesn't exceed 40% of the card width */
-  height: 100%; /* Ensure the image height matches the content height */
-  overflow: hidden;
+.event-card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.wide-event-image img {
+.event-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container without distortion */
+  height: 200px; /* Set consistent image height */
+  object-fit: cover; /* Crop the image appropriately */
 }
 
-.wide-event-content {
-  flex: 2; /* Allocate 2 parts of the card width to the content */
+.event-content {
   padding: 20px;
-  text-align: left; /* Align text to the left for a professional look */
+  text-align: left;
 }
 
-.wide-event-content .event-title {
-  font-size: 1.5em;
+.event-title {
+  font-size: 1.25rem;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.wide-event-content .event-info {
-  margin-bottom: 15px;
+.event-info {
   display: flex;
-  flex-direction: column; /* Stack info vertically */
-  gap: 5px; /* Add spacing between elements */
+  flex-direction: column; /* Stack date and location */
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.wide-event-content .event-description {
-  font-size: 1em;
-  color: #666;
-  margin-top: 10px;
+.event-description {
+  font-size: 0.95rem;
+  color: #555;
 }

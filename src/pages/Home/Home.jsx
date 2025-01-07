@@ -40,13 +40,14 @@ const responsive = {
 };
 
 const Home = () => {
-  const previewEvent = EventList.find(event => {
+  // Filter ongoing events based on current date
+  const ongoingEvents = EventList.filter(event => {
     const now = new Date();
     const start = new Date(event.startDate);
     const end = new Date(event.endDate);
-    return now >= start && now <= end; // Pick an ongoing event
-  }) || EventList[0];
-  
+    return now >= start && now <= end; // Pick ongoing events
+  });
+
   return (
     <>
       <Header
@@ -126,37 +127,43 @@ const Home = () => {
           <p>Catch the latest happenings in Penang!</p>
 
           <div className="events-preview-cards">
-            {previewEvent && (
-                <div className="wide-event-card">
-                    <div className="wide-event-image">
-                        <img src={previewEvent.img} alt={previewEvent.title} />
+            {ongoingEvents.length > 0 ? (
+              ongoingEvents.map(event => (
+                <div key={event.id} className="event-card">
+                  <div className="event-image">
+                    <img src={event.img} alt={event.title} />
+                  </div>
+                  <div className="event-content">
+                    <h2 className="event-title">{event.title}</h2>
+                    <div className="event-info">
+                      <div className="info-item">
+                        <i className="fas fa-calendar-alt"></i>
+                        <span>{event.displayDate}</span>
+                      </div>
+                      <div className="info-item">
+                        <i className="fas fa-map-marker-alt"></i>
+                        <a 
+                          href={event.locationLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="event-location"
+                        >
+                          {event.location}
+                        </a>
+                      </div>
                     </div>
-                    <div className="wide-event-content">
-                        <h2 className="event-title">{previewEvent.title}</h2>
-                        <div className="event-info">
-                            <div className="info-item">
-                                <i className="fas fa-calendar-alt"></i>
-                                <span>{previewEvent.displayDate}</span>
-                            </div>
-                            <a 
-                                href={previewEvent.locationLink} 
-                                target="_blank" 
-                                className="event-location"
-                            >
-                                <i className="fas fa-map-marker-alt"></i>
-                                <span>{previewEvent.location}</span>
-                            </a>
-                        </div>
-                        <p className="event-description">{previewEvent.description}</p>
-                    </div>
+                    <p className="event-description">{event.description}</p>
+                  </div>
                 </div>
+              ))
+            ) : (
+              <p>No ongoing events at the moment.</p>
             )}
           </div>
           <button className="view-all-btn" onClick={() => window.location.href = '/event'}>
             View All Events
           </button>
         </div>
-
       </div>
     </>
   );
