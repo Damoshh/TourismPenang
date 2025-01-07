@@ -16,6 +16,10 @@ import imgbeach15 from '../../../assets/imgbeach15.jpg';
 import imgbeach16 from '../../../assets/imgbeach16.jpg';
 import imgbeach17 from '../../../assets/imgbeach17.jpg';
 import imgbeach18 from '../../../assets/imgbeach18.jpg';
+import imgbeach19 from '../../../assets/imgEtm7.jpg';
+import imgbeach20 from '../../../assets/imgEtm8.jpg';
+import imgbeach21 from '../../../assets/imgEtm3.jpg';
+import imgbeach22 from '../../../assets/imgEtm4.jpg';
 
 
 
@@ -109,6 +113,26 @@ const naturePlaces = [
         locationLink: "https://maps.app.goo.gl/7yqaTrdfHPJqM2cN8",
         rating: 3
     },
+
+    {
+        id: 90,
+        title: "Penang Hill",
+        category: "nature",
+        images: [imgbeach19, imgbeach20],
+        location: "Bukit Bendera, Penang",
+        locationLink: "https://maps.app.goo.gl/BdWuzDTjhGH5Zmjw9",
+        rating: 5
+    },
+
+    {
+        id: 91,
+          title: "Tropical Spice Garden",
+          category: "nature",
+          images: [imgbeach21, imgbeach22],
+          location: "Teluk Bahang, Penang",
+          locationLink: "https://maps.app.goo.gl/dhVDfjogvWTbFE4z9",
+          rating: 5
+        },
 
 
   ];

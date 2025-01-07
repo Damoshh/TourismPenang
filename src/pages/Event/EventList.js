@@ -1,7 +1,16 @@
 import img1 from '../../assets/christmast.jpg';
-import img2 from '../../assets/newyear.jpg';
-import img3 from '../../assets/cny.jpg';
-import img4 from '../../assets/raya.jpg';
+import img2 from '../../assets/img2.jpg';
+import img3 from '../../assets/img3.jpg';
+import img4 from '../../assets/img4.jpg';
+import img5 from '../../assets/img5.jpg';
+import img6 from '../../assets/img6.jpg';
+import img7 from '../../assets/img7.jpg';
+import img8 from '../../assets/img8.jpg';
+import img9 from '../../assets/img9.jpg';
+import img10 from '../../assets/img10.jpg';
+import img11 from '../../assets/img11.jpg';
+import img12 from '../../assets/img12.jpg';
+
 
 const EventList = [
     {
@@ -10,144 +19,131 @@ const EventList = [
         img: img1,
         description: "Join us for festive treats and holiday cheer.",
         startDate: "2024-12-20", 
-        endDate: "2025-01-10",    
+        endDate: "2025-03-10",    
         location: "Georgetown, Penang",
         locationLink: "https://maps.app.goo.gl/xawSgqgm45CU34jVA"
-    },
-    {
+      },
+      {
         id: 2,
-        title: "New Year Heritage Walk",
+        title: "OBS Chinese New Year Run",
         img: img2,
-        description: "Explore Georgetown's historic streets.",
-        startDate: "2024-01-15", 
-        endDate: "2025-01-15",   
-        location: "Georgetown Heritage Area",
-        locationLink: "https://maps.app.goo.gl/vwrQpt7ek75qgwcy6"
-    },
-
-    {
+        description: "Join us for running during chinese new year.",
+        startDate: "2025-1-12", 
+        endDate: "2025-01-12",    
+        location: "Georgetown, Penang",
+        locationLink: "https://maps.app.goo.gl/cKJiUfjYfBjKWC6W7"
+      },
+      {
         id: 3,
-        title: "Chinese New Year Festival",
+        title: "The Return of Raja Durian",
         img: img3,
-        description: "Traditional celebrations and performances.",
-        startDate: "2024-02-09",  
-        endDate: "2024-02-24",
-        location: "Armenian Street",
-        locationLink: "https://maps.app.goo.gl/tcUg2VdqD5WvzoNb6"
-    },
-    {
+        description: "Join us for treating yourself with eating the king of fruit",
+        startDate: "2024-11-16", 
+        endDate: "2025-03-09",    
+        location: "Georgetown, Penang",
+        locationLink: "https://maps.app.goo.gl/iU3P8VPj6DsoBBJz7"
+      },
+      {
         id: 4,
-        title: "Hari Raya Open House",
+        title: "New Year Countdown Party",
         img: img4,
-        description: "Experience Malaysian hospitality.",
-        startDate: "2025-01-22", 
-        endDate: "2025-04-23",
-        location: "Various locations in Penang",
-        locationLink: "https://maps.app.goo.gl/MhHT8p9vEpqi7AxD7"
-    },
-
-    {
+        description: "Join us for celebrating the new year and enjoying some party.",
+        startDate: "2024-12-31", 
+        endDate: "2025-01-01",    
+        location: "Tanjung Bungah, Penang",
+        locationLink: "https://maps.app.goo.gl/WW7dQwMzCE8Q1Y8Z6"
+      },
+  
+      {
         id: 5,
-        title: "Mid-Autumn Festival",
-        img: img1,
-        description: "Lantern festival and mooncakes.",
-        startDate: "2024-09-15",
-        endDate: "2024-09-17",
-        location: "Esplanade, Penang",
-        locationLink: "https://maps.app.goo.gl/xGPi6TBCNzutbX3N9"
-    },
-    {
+        title: "KBJ Bazar Ramadan",
+        img: img5,
+        description: "the Bazaar Ramadan sells everything from traditional kuih-muih, Malay and international cuisine, to make your “Hari Raya” festive a memorable one.",
+        startDate: "2025-03-02", 
+        endDate: "2025-03-30",    
+        location: "Bayan lepas, Penang",
+        locationLink: "https://maps.app.goo.gl/YJnk5jEq9pH6LHYj9"
+      },
+  
+      {
         id: 6,
-        title: "Deepavali Celebration",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2024-10-25",
-        endDate: "2024-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    },
-    {
+        title: "New Year Run 2025",
+        img: img6,
+        description: "Join us for cheering the new year with healthy lifestyle.",
+        startDate: "2025-01-01", 
+        endDate: "2025-03-19",    
+        location: "Butterworth, Penang",
+        locationLink: "https://maps.app.goo.gl/m85Du175U1GaRQzz6"
+      },
+  
+      {
         id: 7,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-10-25",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    }
-    ,
-    {
-        id: 7,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-10-25",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    }
-    ,
-    {
-        id: 7,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-10-25",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    },
-    {
+        title: "Malaysia International Show",
+        img: img7,
+        description: "Featuring global manufacturers and top professionals, it offers hobbyists a chance to learn, compete, and connect. Don't miss this premier event for model enthusiasts!",
+        startDate: "2025-06-14", 
+        endDate: "2025-06-15",    
+        location: "Georgetown, Penang",
+        locationLink: "https://maps.app.goo.gl/mZQxR39BGowMJ43o7"
+      },
+  
+      {
         id: 8,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-01-01",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    },
-    {
-        id: 79,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-01-01",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    }
-    ,    
-    {
+        title: "Penang Bridge Anniversary",
+        img: img8,
+        description: "Honor the historical significance of the Penang Bridge as a cornerstone of Penang’s development.",
+        startDate: "2025-08-01", 
+        endDate: "2025-08-03",    
+        location: "Georgetown, Penang",
+        locationLink: "https://maps.app.goo.gl/6Fv6DqPaQr1nQBDk9"
+      },
+  
+      {
+        id: 9,
+        title: "Malaysia Day celebration",
+        img: img9,
+        description: "Join us for an unforgettable celebration filled with joy, culture, and community spirit, as we honor Malaysia’s heritage together!",
+        startDate: "2025-09-06", 
+        endDate: "2025-09-06",    
+        location: "Bayan Lepas, Penang",
+        locationLink: "https://maps.app.goo.gl/YJnk5jEq9pH6LHYj9"
+      },
+
+      {
         id: 10,
-        title: "Deepavali ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-01-01",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    },
-    {
+        title: "Penang Marathon (PBIM)",
+        img: img10,
+        description: "The run is held annually on the Penang Bridge, the iconic bridge that connects Penang Island to Penang Mainland.",
+        startDate: "2024-12-15", 
+        endDate: "2024-12-16",    
+        location: "Simpang Ampat, Penang",
+        locationLink: "https://maps.app.goo.gl/Yyig3jCTnPmKF75H6"
+      },
+
+      {
         id: 11,
-        title: "lalalla ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-05-01",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    },    {
+        title: "Literary festival",
+        img: img11,
+        description: " It illustrates the importance of literature in expressing the spirit of urban experiences.",
+        startDate: "2024-11-29", 
+        endDate: "2024-12-01",    
+        location: "George Town, Penang",
+        locationLink: "https://maps.app.goo.gl/q2vdua39puYqVMHd7"
+      },
+
+      {
         id: 12,
-        title: "ashiraa ",
-        img: img2,
-        description: "Festival of lights celebration.",
-        startDate: "2025-05-01",
-        endDate: "2025-10-27",
-        location: "Little India, Georgetown",
-        locationLink: "https://maps.app.goo.gl/EgVirpFWX1a8pvTF8"
-    }
+        title: "Pesta Pulau Pinang ",
+        img: img12,
+        description: "Join us for enjoying the night in Penang.",
+        startDate: "2024-12-20", 
+        endDate: "2025-03-01",    
+        location: "Bayan Lepas, Penang",
+        locationLink: "https://maps.app.goo.gl/KFSQ7eUAr3Pdb8in9"
+      },
+
+
+
 ];
 
 const determineEventStatus = (startDate, endDate) => {
