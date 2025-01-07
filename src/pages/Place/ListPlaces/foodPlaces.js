@@ -9,7 +9,7 @@ import imgRst10 from '../../../assets/imgRst10.jpg';
 
 const foodPlaces = [
     {
-      id: 40,
+      id: 21,
       title: "Nasi Kandar Kayu",
       category: "food",
       images: [imgRst6, imgRst5],
@@ -18,7 +18,7 @@ const foodPlaces = [
       rating: 3
     },
     {
-      id: 41,
+      id: 22,
       title: "Hameed Pata Mee",
       category: "food",
       images: [imgRst7, imgRst8],
@@ -27,7 +27,7 @@ const foodPlaces = [
       rating: 4
     },
     {
-      id: 42,
+      id: 23,
       title: "Ali Nasi Lemak",
       category: "food",
       images: [imgRst9, imgRst10],
@@ -36,7 +36,7 @@ const foodPlaces = [
       rating: 4
     },
     {
-      id: 43,
+      id: 24,
       title: "Deen Maju Nasi Kandar",
       category: "food",
       images: [imgRst3, imgRst4],
