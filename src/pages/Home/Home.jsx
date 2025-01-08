@@ -13,7 +13,6 @@ import imgCard7 from '../../assets/card7.jpg';
 import imgCard8 from '../../assets/card8.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import EventCard from '../Event/EventCard/EventCard.jsx'; // Import EventCard
 import EventList from '../Event/EventList';
 
 const responsive = {
@@ -40,12 +39,11 @@ const responsive = {
 };
 
 const Home = () => {
-  // Filter ongoing events based on current date
   const ongoingEvents = EventList.filter(event => {
     const now = new Date();
     const start = new Date(event.startDate);
     const end = new Date(event.endDate);
-    return now >= start && now <= end; // Pick ongoing events
+    return now >= start && now <= end; 
   });
 
   return (
