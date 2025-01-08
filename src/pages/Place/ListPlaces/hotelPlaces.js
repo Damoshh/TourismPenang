@@ -31,7 +31,7 @@ const hotelPlaces = [
 
     {
       id: 52,
-      title: "Bayview Hotel Georgetown Penang",
+      title: "Bayview Hotel Penang",
       category: "hotel",
       images: [imghtl3, imghtl4],
       location: "George Town, Penang",
