@@ -1,7 +1,7 @@
 import React from "react";
 import Content from './Content/Content'
 import Header from '../../components/Header/Header'
-import imgAbout from '../../assets/about0.jpg'
+import imgAbout from '../../assets/about5.jpg'
 import './About.css'
 
 const About = () => {
