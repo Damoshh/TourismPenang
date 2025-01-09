@@ -59,10 +59,6 @@ const SearchPlace = () => {
     e.preventDefault();
   };
 
-  useEffect(() => {
-    document.title = 'Discover Penang - Find Places';
-  }, []);
-
   return (
     <>
       <div className="stats-container">
