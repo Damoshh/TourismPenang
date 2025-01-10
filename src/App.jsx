@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Event from "./pages/Event/Event";
 import Place from "./pages/Place/Place";
 import About from "./pages/About/About";
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
 
