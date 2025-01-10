@@ -1,5 +1,9 @@
 import React from 'react'
 import './Content.css'
+import imgAb1 from '../../../assets/about1.jpg';
+import imgAb2 from '../../../assets/about2.jpg';
+import imgAb3 from '../../../assets/about3.webp';
+
 
 const Content = () => {
   return (
@@ -13,7 +17,7 @@ const Content = () => {
           Halim Muadzam Shah Bridge. Penang's strategic location along the Strait of Malacca 
           has historically made it a bustling hub of trade and culture.
         </p>
-        <img className="section-image" src="src/assets/about1.jpg" alt="Penang Geography" />
+        <img className="section-image" src={imgAb1} alt="Penang Geography" />
         
         <h2 className="section-title">Area and Climate</h2>
         <p className="section-text">
@@ -29,7 +33,7 @@ const Content = () => {
           Chinese, Indians, and other ethnic groups. The Chinese community makes up a significant 
           portion of the state's population, followed by Malays and Indians.
         </p>
-        <img className="section-image" src="src/assets/about2.jpg" alt="Penang Culture" />
+        <img className="section-image" src={imgAb2} alt="Penang Culture" />
       </div>
 
       <div className="content-section">
@@ -48,7 +52,7 @@ const Content = () => {
           the Indian community often speaks Tamil. This multilingualism is a defining 
           characteristic of the state's vibrant identity.
         </p>
-        <img className="section-image" src="src/assets/about3.webp" alt="Religious Diversity" />
+        <img className="section-image" src={imgAb3} alt="Religious Diversity" />
       </div>
     </>
   )
