@@ -97,7 +97,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .navbar{
     z-index: 99;
     width: 96%;

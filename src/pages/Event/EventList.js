@@ -3,7 +3,6 @@ import img2 from '../../assets/img2.jpg';
 import img3 from '../../assets/img3.jpg';
 import img4 from '../../assets/img4.jpg';
 import img5 from '../../assets/img5.jpg';
-import img6 from '../../assets/img6.jpg';
 import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
 import img9 from '../../assets/img9.jpg';
@@ -63,17 +62,6 @@ const EventList = [
         endDate: "2025-03-30",    
         location: "Bayan lepas, Penang",
         locationLink: "https://maps.app.goo.gl/YJnk5jEq9pH6LHYj9"
-      },
-  
-      {
-        id: 6,
-        title: "New Year Run 2025",
-        img: img6,
-        description: "Join us for cheering the new year with healthy lifestyle.",
-        startDate: "2025-01-01", 
-        endDate: "2025-03-19",    
-        location: "Butterworth, Penang",
-        locationLink: "https://maps.app.goo.gl/m85Du175U1GaRQzz6"
       },
   
       {
