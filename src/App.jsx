@@ -18,7 +18,7 @@ function App() {
   }, [theme]);
 
   return (
-    <Router basename = "/tourismpenang/">
+    <Router basename = "/TourismPenang/">
     <div className={`App ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
