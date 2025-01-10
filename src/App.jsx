@@ -18,9 +18,8 @@ function App() {
   }, [theme]);
 
   return (
-    <BrowserRouter basename = "/tourismpenang/">
+    <Router basename = "/tourismpenang/">
     <div className={`App ${theme}`}>
-      <Router>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,9 +28,8 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
-      </Router>
-    </div>
-    </BrowserRouter>
+      </div>
+    </Router>
   );
 }
 
