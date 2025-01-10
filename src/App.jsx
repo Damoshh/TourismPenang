@@ -5,8 +5,9 @@ import Home from "./pages/Home/Home";
 import Event from "./pages/Event/Event";
 import Place from "./pages/Place/Place";
 import About from "./pages/About/About";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+
 
 function App() {
   const current_theme = localStorage.getItem("current_theme");
@@ -17,6 +18,7 @@ function App() {
   }, [theme]);
 
   return (
+    <BrowserRouter basename = "/tourismpenang/">
     <div className={`App ${theme}`}>
       <Router>
         <Navbar theme={theme} setTheme={setTheme} />
@@ -29,6 +31,7 @@ function App() {
         <Footer />
       </Router>
     </div>
+    </BrowserRouter>
   );
 }
 
