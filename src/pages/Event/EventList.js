@@ -23,16 +23,6 @@ const EventList = [
         locationLink: "https://maps.app.goo.gl/xawSgqgm45CU34jVA"
       },
       {
-        id: 2,
-        title: "OBS Chinese New Year Run",
-        img: img2,
-        description: "Join us for running during chinese new year.",
-        startDate: "2025-1-12", 
-        endDate: "2025-01-12",    
-        location: "Georgetown, Penang",
-        locationLink: "https://maps.app.goo.gl/cKJiUfjYfBjKWC6W7"
-      },
-      {
         id: 3,
         title: "The Return of Raja Durian",
         img: img3,

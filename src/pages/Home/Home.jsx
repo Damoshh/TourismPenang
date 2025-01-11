@@ -16,26 +16,26 @@ import 'react-multi-carousel/lib/styles.css';
 import EventList from '../Event/EventList';
 
 const responsive = {
-    superLargeDesktop: {
+  superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-      partialVisibilityGutter: 30,
-    },
-    desktop: {
+      items: 4,
+      partialVisibilityGutter: 40
+  },
+  desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
-      partialVisibilityGutter: 30,
-    },
-    tablet: {
+      partialVisibilityGutter: 30
+  },
+  tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      partialVisibilityGutter: 20,
-    },
-    mobile: {
+      partialVisibilityGutter: 20
+  },
+  mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 10,
-    },  
+      partialVisibilityGutter: 10
+  }
 };
 
 const Home = () => {
@@ -66,7 +66,6 @@ const Home = () => {
           <h2 className='rec-penang'>Recommendations</h2>
           <Carousel 
             responsive={responsive}
-            centerMode={true}
             infinite={true}
             autoPlay={true}
             autoPlaySpeed={3000}>

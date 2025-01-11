@@ -1,5 +1,5 @@
 .home-page {
-  background: linear-gradient(180deg, #003f56 0%, #e3d9a2 100%);
+  background: linear-gradient(180deg, #003f56 0%, #e3d9a2 120%);
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 10rem;
@@ -44,6 +44,7 @@
 .react-multi-carousel-item {
   display: flex;
   justify-content: center;
+  padding: 0 5px;
 }
 
 .rec-penang {
@@ -198,58 +199,13 @@
   background-color: #4e8fe4;
 }
 
-@media (max-width: 1200px) {
-  .events-preview-cards {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
-
 @media (max-width: 768px) {
-  .home-events-preview {
-    width: calc(100% - 2rem);
-    padding: 1rem;
-  }
-
-  .events-preview-cards {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .home-title {
-    font-size: 2.5rem;
-  }
-
-  .home-subtitle {
-    font-size: 0.8rem;
-  }
-
   .about-penang {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
 
-  .about-penang h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-penang p {
-    font-size: 0.8rem;
-  }
-
-  .rec-penang {
-    font-size: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .carousel-container {
-    padding: 0 5px;
-  }
-}
-
-@media (max-width: 480px) {
   .events-preview-cards {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .event-card {
@@ -257,15 +213,88 @@
   }
 
   .rec-penang {
-    font-size: 1.2rem;
-    margin: 1rem auto;
+    font-size: 1.5rem;
+  }
+
+  .view-all-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 
   .carousel-container {
-    padding: 0;
+    padding: 0rem 0.8rem 2rem 0.8rem;
+    margin: 1rem 1.5rem 0.5rem 1.5rem;
+}
+}
+
+@media (max-width: 480px) {
+  .about-penang {
+    padding: 1rem;
+    margin: 1rem 1rem 1.5rem 1rem;
   }
 
+  .about-penang h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-penang p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .carousel-container {
+    padding: 0rem 0.5rem 2rem 0.5rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.rec-penang {
+  font-size: 1.5rem;
+  margin: 0.5rem auto; 
+
+}
+
   .home-events-preview {
+    width: calc(100% - 2rem);
+    margin: 1rem;
     padding: 1rem 0.5rem;
+  }
+
+  .title-header {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+
+  .events-preview-cards {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .event-card {
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .event-image img {
+    height: 180px;
+  }
+
+  .event-content {
+    padding: 15px;
+  }
+
+  .event-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .event-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .view-all-btn {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 }
