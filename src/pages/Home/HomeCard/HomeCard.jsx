@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomeCard.css';
 
 function Card({ imgSrc, title, text, link }) {
@@ -8,9 +9,9 @@ function Card({ imgSrc, title, text, link }) {
       <h2 className="card-title">{title}</h2>
       <p className="card-text">{text}</p>
       {link && (
-        <a href={link} className="card-btn">
+        <Link to={link} className="card-btn">
           Learn More
-        </a>
+        </Link>
       )}
     </div>
   );

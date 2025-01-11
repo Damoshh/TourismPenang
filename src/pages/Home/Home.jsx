@@ -14,6 +14,8 @@ import imgCard8 from '../../assets/card8.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import EventList from '../Event/EventList';
+import { Link } from "react-router-dom";
+
 
 const responsive = {
   superLargeDesktop: {
@@ -154,9 +156,9 @@ const Home = () => {
               <p>No ongoing events at the moment.</p>
             )}
           </div>
-          <button className="view-all-btn" onClick={() => window.location.href = '/event'}>
-            View All Events
-          </button>
+          <Link to="/place">      
+            <button className="view-all-btn"> View All Events </button>
+          </Link>
         </div>
       </div>
     </>
